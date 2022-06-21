@@ -1,0 +1,59 @@
+#include <iostream>
+#include <stdio.h>
+#include <cstring>
+#include <string>
+
+using namespace std;
+
+int validar_num(string codigo)
+{
+    int i = 0, j;
+
+    j = strlen(codigo.c_str());
+
+    while (i < j) {
+        if (isdigit(codigo[i]) != 0) {
+            i++;
+        } else {
+            return 1;
+        }
+    }
+
+    return 0;
+
+}
+
+int main()
+{
+    string s, codigo;
+    int validator, suma = 0, codigo_int;
+    cout << "Si desea ingresar codigo digite 01, de lo contrario 00\n";
+    cin >> s;
+
+    while (s == "01") {
+        cout << "Ingrese codigo de estudiante o 00 para terminar: \n";
+        cin >> codigo;
+        validator = validar_num(codigo);
+        cout << validator;
+
+        if (validator == 1) {
+            cout << "El valor ingresado no es un codigo de estudiante valido\n";
+        }
+        else if(codigo == "00"){
+            return 0;
+        }
+        else {
+            cout << "El codigo de estudiante es valido\n";
+
+            codigo_int = atoi(codigo.c_str());
+            while (codigo_int > 0) {
+                suma = suma + codigo_int % 10;
+                codigo_int = codigo_int / 10;
+            }
+            cout << suma;
+            suma=0;
+        }
+    }
+
+    return 0;
+}
