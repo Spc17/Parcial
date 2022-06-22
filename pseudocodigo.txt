@@ -1,0 +1,21 @@
+Inicio
+--Funcion de validacion
+--Definicion de variable en int (enteros) para i,j;
+--ciclo while para la mientras i < j para verificar cada caracter del c. estudiantil
+--If para el aumento i en cada caracter en j y determinar error de existir
+--inicio de main
+--Definicion de variable codigo
+--definicion de "suma=0" en valor int para enteros
+--Indicacion de continuar 01 o finalizar 00
+--Valor ingresado dado a variable codigo
+--funcion de validacion
+--If para dar mensaje de "Codigo valido" o "Codigo invalido"
+--Para el codigo invalido se pide nuevamente el codigo del estudiante
+--Para codigo valido:-Ciclo while para obtener valor de cada digito del codigo
+                     -Se realiza la suma de cada digito
+--Se muestra en pantalla el valor de la suma del codigo de estudiante
+--Se limpia la variable "suma" en caso de continuar, el proximo no se sume con el actual
+--Se pide codigo de estudiante o 00 para detnerse
+--Digitacion del codigo de estudiante
+--Repite en caso digitar codigo de estudiante
+--En caso de 00, se detiene.
